@@ -101,7 +101,7 @@ const NavItem = (props: {
       <button
         className={`transition  p-2 lg:p-4 md:px-8    ${
           props.active ? " text-primary" : " text-secondary"
-        } hover:text-primary`}
+        } `}
       >
         <span className="font-semibold ">{props.children}</span>
       </button>
