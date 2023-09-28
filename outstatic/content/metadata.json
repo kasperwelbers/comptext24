@@ -1,6 +1,6 @@
 {
-  "commit": "a66833f78c5d55cb4d3596657daf8c93b5b42bb5",
-  "generated": "2023-09-26T11:45:29.385Z",
+  "commit": "116ac2120695d925b2d275c587fe8256e9296638",
+  "generated": "2023-09-28T11:12:28.900Z",
   "metadata": [
     {
       "__outstatic": {
@@ -19,24 +19,6 @@
       "slug": "sponsors",
       "status": "published",
       "title": "Sponsors"
-    },
-    {
-      "__outstatic": {
-        "commit": "89557e77f789294224d3cbb63889685206878182",
-        "hash": "1497716472",
-        "path": "outstatic/content/pages/welcome.md"
-      },
-      "author": {
-        "name": "Kasper Welbers",
-        "picture": ""
-      },
-      "collection": "pages",
-      "coverImage": "/images/logo.png",
-      "description": "",
-      "publishedAt": "2023-09-21T04:35:07.000Z",
-      "slug": "welcome",
-      "status": "published",
-      "title": "Welcome"
     },
     {
       "__outstatic": {
@@ -73,6 +55,24 @@
       "slug": "program",
       "status": "published",
       "title": "Program"
+    },
+    {
+      "__outstatic": {
+        "commit": "116ac2120695d925b2d275c587fe8256e9296638",
+        "hash": "89420134",
+        "path": "outstatic/content/pages/welcome.md"
+      },
+      "author": {
+        "name": "Kasper Welbers",
+        "picture": ""
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "Welcome to CompText 2024",
+      "publishedAt": "2023-09-21T04:35:07.000Z",
+      "slug": "welcome",
+      "status": "published",
+      "title": "Welcome"
     }
   ]
 }
