@@ -12,26 +12,25 @@ interface Props {
 export default function Sections({ sections }: Props) {
   const refs = useRef<any>([]);
   const [observed, setObserved] = useState<Record<string, boolean>>({});
-  const [current, setCurrent] = useState(sections[0].id);
 
-  //   let current = "welcome";
-  //   for (let i = 0; i < sections.length; i++) {
-  //     if (observed[sections[i].id]) {
-  //       current = sections[i].id;
-  //       if (i === 0) break;
-  //     }
-  //   }
+  let current = sections[0].id;
+  for (let i = 0; i < sections.length; i++) {
+    if (observed[sections[i].id]) {
+      current = sections[i].id;
+      if (i === 0) break;
+    }
+  }
 
   useEffect(() => {
     if (!refs.current?.length) return;
-    const options = { threshold: 0.3 };
+    const options = { rootMargin: "-25% 0% -25% 0%" };
 
     const observer = new IntersectionObserver((entries) => {
-      for (let i = 0; i < entries.length; i++) {
-        if (entries[i].isIntersecting) {
-          setCurrent(entries[i].target.id);
-          if (i === 0) break;
-        }
+      for (let entry of entries) {
+        setObserved((current) => ({
+          ...current,
+          [entry.target.id]: entry.isIntersecting,
+        }));
       }
     }, options);
 
@@ -64,14 +63,13 @@ export default function Sections({ sections }: Props) {
         <div className=" flex flex-col-reverse lg:flex-row">
           <div className="flex-auto relative w-full max-w-2xl mx-auto lg:mx-0 prose lg:prose-xl mt-8 lg:mt-24 mb-[25%]">
             {sections.map((section, i) => (
-              <div key={section.id} className="relative  mb-24">
-                <div
-                  id={section.id}
-                  ref={(el) => (refs.current[i] = el)}
-                  className="Sentinel absolute top-0 w-1 h-screen max-h-full scroll-mt-28 "
-                />
-                <div dangerouslySetInnerHTML={{ __html: section.content }} />
-              </div>
+              <div
+                key={section.id}
+                ref={(el) => (refs.current[i] = el)}
+                id={section.id}
+                className="relative mb-24 scroll-mt-28"
+                dangerouslySetInnerHTML={{ __html: section.content }}
+              />
             ))}
           </div>
 
