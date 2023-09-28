@@ -12,25 +12,26 @@ interface Props {
 export default function Sections({ sections }: Props) {
   const refs = useRef<any>([]);
   const [observed, setObserved] = useState<Record<string, boolean>>({});
+  const [current, setCurrent] = useState(sections[0].id);
 
-  let current = "welcome";
-  for (let i = 0; i < sections.length; i++) {
-    if (observed[sections[i].id]) {
-      current = sections[i].id;
-      if (i === 0) break;
-    }
-  }
+  //   let current = "welcome";
+  //   for (let i = 0; i < sections.length; i++) {
+  //     if (observed[sections[i].id]) {
+  //       current = sections[i].id;
+  //       if (i === 0) break;
+  //     }
+  //   }
 
   useEffect(() => {
     if (!refs.current?.length) return;
-    const options = { threshold: 0.5 };
+    const options = { threshold: 0.3 };
 
     const observer = new IntersectionObserver((entries) => {
-      for (let entry of entries) {
-        setObserved((observed) => ({
-          ...observed,
-          [entry.target.id]: entry.isIntersecting,
-        }));
+      for (let i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) {
+          setCurrent(entries[i].target.id);
+          if (i === 0) break;
+        }
       }
     }, options);
 
@@ -67,7 +68,7 @@ export default function Sections({ sections }: Props) {
                 <div
                   id={section.id}
                   ref={(el) => (refs.current[i] = el)}
-                  className="Sentinel absolute top-0 w-1 h-screen max-h-full scroll-mt-28"
+                  className="Sentinel absolute top-0 w-1 h-screen max-h-full scroll-mt-28 "
                 />
                 <div dangerouslySetInnerHTML={{ __html: section.content }} />
               </div>
