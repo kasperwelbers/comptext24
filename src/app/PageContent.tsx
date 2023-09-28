@@ -55,8 +55,8 @@ export default function Sections({ sections }: Props) {
   return (
     <>
       <div className="flex justify-between items-center lg:hidden sticky top-0 h-20 backdrop-blur-md bg-[#fff7] border-b-2 border-primary z-20">
-        <img src="/images/logo_small.png" className="h-8 px-8 " />
-        <div className="flex justify-center">{navItems}</div>
+        <img src="/images/logo_small.png" className="h-8 pl-4" />
+        <div className="flex flex-wrap justify-center">{navItems}</div>
         <div />
       </div>
       <div className="w-full max-w-[1200px] mx-auto px-4 md:px-8 py-6 md:py-12 animate-fade-in">
@@ -67,7 +67,7 @@ export default function Sections({ sections }: Props) {
                 <div
                   id={section.id}
                   ref={(el) => (refs.current[i] = el)}
-                  className="Sentinel absolute top-0 w-1 h-screen max-h-full scroll-mt-16"
+                  className="Sentinel absolute top-0 w-1 h-screen max-h-full scroll-mt-28"
                 />
                 <div dangerouslySetInnerHTML={{ __html: section.content }} />
               </div>
@@ -79,7 +79,7 @@ export default function Sections({ sections }: Props) {
               <img
                 alt={"Logo"}
                 src={"/images/logo.png"}
-                className="p-8  lg:w-full max-w-[500px]"
+                className="p-8 w-full max-w-[500px]"
               />
               <ul className="hidden lg:flex flex-col lg:mx-auto justify-center prose md:prose-xl lg:prose-2xl">
                 {navItems}
@@ -100,7 +100,7 @@ const NavItem = (props: {
   return (
     <Link href={`#${props.anchor}`}>
       <button
-        className={`transition  p-4 md:px-8    ${
+        className={`transition  p-2 lg:p-4 md:px-8    ${
           props.active ? " text-primary" : " text-secondary"
         } hover:text-primary`}
       >
