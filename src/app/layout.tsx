@@ -1,19 +1,16 @@
 import { absoluteUrl } from "@/lib/utils";
 import "./globals.css";
 import { Metadata } from "next";
-import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: {
-    default: "Societal Analytics Lab",
-    template: "%s | Societal Analytics Lab",
+    default: "CompText 2024",
+    template: "%s | CompText 2024",
   },
-  description:
-    "We are the Societal Analytics Lab of the Faculty of Social Science at the Vrije Universiteit Amsterdam",
+  description: "Website for the CompText 2024 Conference",
   openGraph: {
-    title: "Societal Analytics Lab",
-    description:
-      "We are the Societal Analytics Lab of the Faculty of Social Science at the Vrije Universiteit Amsterdam",
+    title: "CompText 2024",
+    description: "Website for the CompText 2024 Conference",
     url: absoluteUrl("/"),
     locale: "en_US",
     type: "website",
