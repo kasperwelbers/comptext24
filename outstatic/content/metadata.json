@@ -1,65 +1,29 @@
 {
-  "commit": "116ac2120695d925b2d275c587fe8256e9296638",
-  "generated": "2023-09-28T11:12:28.900Z",
+  "commit": "6cc08410e2da54b4363fca3d695585c33359211b",
+  "generated": "Thu, 19 Oct 2023 12:38:15 GMT",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "89557e77f789294224d3cbb63889685206878182",
-        "hash": "1497716472",
-        "path": "outstatic/content/pages/sponsors.md"
+        "commit": "d26448de048a4d6e237a7dcc34161a892ce927e5",
+        "hash": "2121500528",
+        "path": "outstatic/content/pages/CfP.md"
       },
       "author": {
         "name": "Kasper Welbers",
         "picture": ""
       },
       "collection": "pages",
-      "coverImage": "/images/logo.png",
-      "description": "",
-      "publishedAt": "2023-09-21T04:35:07.000Z",
-      "slug": "sponsors",
+      "coverImage": "",
+      "description": "Program of CompText 2024",
+      "publishedAt": "2023-10-18T14:35:07.000Z",
+      "slug": "cfp",
       "status": "published",
-      "title": "Sponsors"
+      "title": "Call for Papers"
     },
     {
       "__outstatic": {
-        "commit": "89557e77f789294224d3cbb63889685206878182",
-        "hash": "1497716472",
-        "path": "outstatic/content/pages/workshops.md"
-      },
-      "author": {
-        "name": "Kasper Welbers",
-        "picture": ""
-      },
-      "collection": "pages",
-      "coverImage": "/images/logo.png",
-      "description": "",
-      "publishedAt": "2023-09-21T04:35:07.000Z",
-      "slug": "workshops",
-      "status": "published",
-      "title": "Workshops"
-    },
-    {
-      "__outstatic": {
-        "commit": "89557e77f789294224d3cbb63889685206878182",
-        "hash": "1497716472",
-        "path": "outstatic/content/pages/program.md"
-      },
-      "author": {
-        "name": "Kasper Welbers",
-        "picture": ""
-      },
-      "collection": "pages",
-      "coverImage": "/images/logo.png",
-      "description": "",
-      "publishedAt": "2023-09-21T04:35:07.000Z",
-      "slug": "program",
-      "status": "published",
-      "title": "Program"
-    },
-    {
-      "__outstatic": {
-        "commit": "116ac2120695d925b2d275c587fe8256e9296638",
-        "hash": "89420134",
+        "commit": "1c34850f95a7621ed70821002afc4c3737f3ca8a",
+        "hash": "2946768691",
         "path": "outstatic/content/pages/welcome.md"
       },
       "author": {
@@ -73,6 +37,60 @@
       "slug": "welcome",
       "status": "published",
       "title": "Welcome"
+    },
+    {
+      "__outstatic": {
+        "commit": "59109d689f75a147e430a55b673f5c395551ebc7",
+        "hash": "731948116",
+        "path": "outstatic/content/pages/program.md"
+      },
+      "author": {
+        "name": "Kasper Welbers",
+        "picture": ""
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "Program of CompText 2024",
+      "publishedAt": "2023-09-21T04:35:07.000Z",
+      "slug": "program",
+      "status": "published",
+      "title": "Program"
+    },
+    {
+      "__outstatic": {
+        "commit": "df2af83f7ed2f2eb25648d5753dfbd73380537a6",
+        "hash": "4048291728",
+        "path": "outstatic/content/pages/workshops.md"
+      },
+      "author": {
+        "name": "Kasper Welbers",
+        "picture": ""
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "Pre-conference workshops",
+      "publishedAt": "2023-09-21T04:35:07.000Z",
+      "slug": "workshops",
+      "status": "published",
+      "title": "Workshops"
+    },
+    {
+      "__outstatic": {
+        "commit": "4c14826650ff8751b5c4f307ee8100d99c64549f",
+        "hash": "1596991553",
+        "path": "outstatic/content/pages/sponsors.md"
+      },
+      "author": {
+        "name": "Kasper Welbers",
+        "picture": ""
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "Sponsors of CompText 2024",
+      "publishedAt": "2023-09-21T04:35:07.000Z",
+      "slug": "sponsors",
+      "status": "published",
+      "title": "Sponsors"
     }
   ]
 }
