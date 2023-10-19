@@ -1,6 +1,6 @@
 {
-  "commit": "e4e94c1b33911cce8513d4b6c2aa7b2315ee8a5f",
-  "generated": "2023-10-19T12:59:36.180Z",
+  "commit": "57434f380a679ef8e5a9c7d9bf44d41dbf9ddd4a",
+  "generated": "2023-10-19T13:30:47.136Z",
   "metadata": [
     {
       "__outstatic": {
@@ -58,24 +58,6 @@
     },
     {
       "__outstatic": {
-        "commit": "14fd09c94a668385485694fa40ebcbc1c1a11386",
-        "hash": "3497278045",
-        "path": "outstatic/content/pages/cfp.md"
-      },
-      "author": {
-        "name": "",
-        "picture": ""
-      },
-      "collection": "pages",
-      "coverImage": "",
-      "description": "Program of CompText 2024",
-      "publishedAt": "2023-10-18T14:35:07.000Z",
-      "slug": "cfp",
-      "status": "published",
-      "title": "Call for Papers"
-    },
-    {
-      "__outstatic": {
         "commit": "e4e94c1b33911cce8513d4b6c2aa7b2315ee8a5f",
         "hash": "2047554260",
         "path": "outstatic/content/pages/welcome.md"
@@ -91,6 +73,24 @@
       "slug": "welcome",
       "status": "published",
       "title": "Welcome"
+    },
+    {
+      "__outstatic": {
+        "commit": "57434f380a679ef8e5a9c7d9bf44d41dbf9ddd4a",
+        "hash": "2819518878",
+        "path": "outstatic/content/pages/cfp.md"
+      },
+      "author": {
+        "name": "",
+        "picture": ""
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "Program of CompText 2024",
+      "publishedAt": "2023-10-18T14:35:07.000Z",
+      "slug": "cfp",
+      "status": "published",
+      "title": "Call for Papers"
     }
   ]
 }
