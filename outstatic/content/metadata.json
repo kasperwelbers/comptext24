@@ -1,28 +1,10 @@
 {
-  "commit": "26aba0a527cdd73b84eb2291861c79af70a2646a",
-  "generated": "2023-10-19T13:36:26.061Z",
+  "commit": "4f798df8b44bdce425f45ded5ec5676697bc771f",
+  "generated": "Thu, 19 Oct 2023 13:39:27 GMT",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "4c14826650ff8751b5c4f307ee8100d99c64549f",
-        "hash": "1596991553",
-        "path": "outstatic/content/pages/sponsors.md"
-      },
-      "author": {
-        "name": "Kasper Welbers",
-        "picture": ""
-      },
-      "collection": "pages",
-      "coverImage": "",
-      "description": "Sponsors of CompText 2024",
-      "publishedAt": "2023-09-21T04:35:07.000Z",
-      "slug": "sponsors",
-      "status": "published",
-      "title": "Sponsors"
-    },
-    {
-      "__outstatic": {
-        "commit": "e4e94c1b33911cce8513d4b6c2aa7b2315ee8a5f",
+        "commit": "3b56bca3c8f83aa30a43182e11ecae18f183e09f",
         "hash": "2047554260",
         "path": "outstatic/content/pages/welcome.md"
       },
@@ -40,25 +22,7 @@
     },
     {
       "__outstatic": {
-        "commit": "57434f380a679ef8e5a9c7d9bf44d41dbf9ddd4a",
-        "hash": "2819518878",
-        "path": "outstatic/content/pages/cfp.md"
-      },
-      "author": {
-        "name": "",
-        "picture": ""
-      },
-      "collection": "pages",
-      "coverImage": "",
-      "description": "Program of CompText 2024",
-      "publishedAt": "2023-10-18T14:35:07.000Z",
-      "slug": "cfp",
-      "status": "published",
-      "title": "Call for Papers"
-    },
-    {
-      "__outstatic": {
-        "commit": "1a366ffd4eca7cbd88a0e4ec5075b2bb7da3b68f",
+        "commit": "6eb9684808ab212628e671ce27aeb8fb1f6be54c",
         "hash": "3070813816",
         "path": "outstatic/content/pages/workshops.md"
       },
@@ -76,7 +40,7 @@
     },
     {
       "__outstatic": {
-        "commit": "26aba0a527cdd73b84eb2291861c79af70a2646a",
+        "commit": "20d7e7d7b114dc6ae8a9c94fb5b620ac9e430fdb",
         "hash": "3161062547",
         "path": "outstatic/content/pages/program.md"
       },
@@ -91,6 +55,42 @@
       "slug": "program",
       "status": "published",
       "title": "Program"
+    },
+    {
+      "__outstatic": {
+        "commit": "3b193aa83893b2b96c616e9e66bd587d787dc924",
+        "hash": "2819518878",
+        "path": "outstatic/content/pages/cfp.md"
+      },
+      "author": {
+        "name": "",
+        "picture": ""
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "Program of CompText 2024",
+      "publishedAt": "2023-10-18T14:35:07.000Z",
+      "slug": "cfp",
+      "status": "published",
+      "title": "Call for Papers"
+    },
+    {
+      "__outstatic": {
+        "commit": "4c14826650ff8751b5c4f307ee8100d99c64549f",
+        "hash": "1596991553",
+        "path": "outstatic/content/pages/sponsors.md"
+      },
+      "author": {
+        "name": "Kasper Welbers",
+        "picture": ""
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "Sponsors of CompText 2024",
+      "publishedAt": "2023-09-21T04:35:07.000Z",
+      "slug": "sponsors",
+      "status": "published",
+      "title": "Sponsors"
     }
   ]
 }
