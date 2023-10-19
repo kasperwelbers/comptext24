@@ -1,6 +1,6 @@
 {
-  "commit": "57434f380a679ef8e5a9c7d9bf44d41dbf9ddd4a",
-  "generated": "2023-10-19T13:30:47.136Z",
+  "commit": "7a050ac5865804fc7cbac86707fb2ccfc3c93fc7",
+  "generated": "2023-10-19T13:31:12.910Z",
   "metadata": [
     {
       "__outstatic": {
@@ -19,24 +19,6 @@
       "slug": "program",
       "status": "published",
       "title": "Program"
-    },
-    {
-      "__outstatic": {
-        "commit": "df2af83f7ed2f2eb25648d5753dfbd73380537a6",
-        "hash": "4048291728",
-        "path": "outstatic/content/pages/workshops.md"
-      },
-      "author": {
-        "name": "Kasper Welbers",
-        "picture": ""
-      },
-      "collection": "pages",
-      "coverImage": "",
-      "description": "Pre-conference workshops",
-      "publishedAt": "2023-09-21T04:35:07.000Z",
-      "slug": "workshops",
-      "status": "published",
-      "title": "Workshops"
     },
     {
       "__outstatic": {
@@ -91,6 +73,24 @@
       "slug": "cfp",
       "status": "published",
       "title": "Call for Papers"
+    },
+    {
+      "__outstatic": {
+        "commit": "7a050ac5865804fc7cbac86707fb2ccfc3c93fc7",
+        "hash": "454696356",
+        "path": "outstatic/content/pages/workshops.md"
+      },
+      "author": {
+        "name": "Kasper Welbers",
+        "picture": ""
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "Pre-conference workshops",
+      "publishedAt": "2023-09-21T04:35:07.000Z",
+      "slug": "workshops",
+      "status": "draft",
+      "title": "Workshops"
     }
   ]
 }
