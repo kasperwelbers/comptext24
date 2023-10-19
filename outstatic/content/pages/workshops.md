@@ -1,6 +1,6 @@
 ---
 title: 'Workshops'
-status: 'draft'
+status: 'published'
 author:
   name: 'Kasper Welbers'
   picture: ''
