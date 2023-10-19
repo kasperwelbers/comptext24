@@ -1,25 +1,7 @@
 {
-  "commit": "14fd09c94a668385485694fa40ebcbc1c1a11386",
-  "generated": "2023-10-19T12:58:29.042Z",
+  "commit": "e4e94c1b33911cce8513d4b6c2aa7b2315ee8a5f",
+  "generated": "2023-10-19T12:59:36.180Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "1c34850f95a7621ed70821002afc4c3737f3ca8a",
-        "hash": "2946768691",
-        "path": "outstatic/content/pages/welcome.md"
-      },
-      "author": {
-        "name": "Kasper Welbers",
-        "picture": ""
-      },
-      "collection": "pages",
-      "coverImage": "",
-      "description": "Welcome to CompText 2024",
-      "publishedAt": "2023-09-21T04:35:07.000Z",
-      "slug": "welcome",
-      "status": "published",
-      "title": "Welcome"
-    },
     {
       "__outstatic": {
         "commit": "59109d689f75a147e430a55b673f5c395551ebc7",
@@ -91,6 +73,24 @@
       "slug": "cfp",
       "status": "published",
       "title": "Call for Papers"
+    },
+    {
+      "__outstatic": {
+        "commit": "e4e94c1b33911cce8513d4b6c2aa7b2315ee8a5f",
+        "hash": "2047554260",
+        "path": "outstatic/content/pages/welcome.md"
+      },
+      "author": {
+        "name": "Kasper Welbers",
+        "picture": ""
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "Welcome to CompText 2024",
+      "publishedAt": "2023-09-21T04:35:07.000Z",
+      "slug": "welcome",
+      "status": "published",
+      "title": "Welcome"
     }
   ]
 }
