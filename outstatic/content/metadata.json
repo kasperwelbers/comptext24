@@ -1,25 +1,7 @@
 {
-  "commit": "1a366ffd4eca7cbd88a0e4ec5075b2bb7da3b68f",
-  "generated": "2023-10-19T13:33:55.988Z",
+  "commit": "26aba0a527cdd73b84eb2291861c79af70a2646a",
+  "generated": "2023-10-19T13:36:26.061Z",
   "metadata": [
-    {
-      "__outstatic": {
-        "commit": "59109d689f75a147e430a55b673f5c395551ebc7",
-        "hash": "731948116",
-        "path": "outstatic/content/pages/program.md"
-      },
-      "author": {
-        "name": "Kasper Welbers",
-        "picture": ""
-      },
-      "collection": "pages",
-      "coverImage": "",
-      "description": "Program of CompText 2024",
-      "publishedAt": "2023-09-21T04:35:07.000Z",
-      "slug": "program",
-      "status": "published",
-      "title": "Program"
-    },
     {
       "__outstatic": {
         "commit": "4c14826650ff8751b5c4f307ee8100d99c64549f",
@@ -91,6 +73,24 @@
       "slug": "workshops",
       "status": "published",
       "title": "Workshops"
+    },
+    {
+      "__outstatic": {
+        "commit": "26aba0a527cdd73b84eb2291861c79af70a2646a",
+        "hash": "3161062547",
+        "path": "outstatic/content/pages/program.md"
+      },
+      "author": {
+        "name": "Kasper Welbers",
+        "picture": ""
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "Program of CompText 2024",
+      "publishedAt": "2023-09-21T04:35:07.000Z",
+      "slug": "program",
+      "status": "published",
+      "title": "Program"
     }
   ]
 }
