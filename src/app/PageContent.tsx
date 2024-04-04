@@ -2,14 +2,15 @@
 
 import { Section } from "@/types";
 import Link from "next/link";
-import { RefObject, useEffect, useRef, useState } from "react";
-import { InView } from "react-intersection-observer";
+import { useEffect, useRef, useState } from "react";
+import Program from "./program";
 
 interface Props {
   sections: Section[];
+  program: Record<string, string | number>[];
 }
 
-export default function Sections({ sections }: Props) {
+export default function Sections({ sections, program }: Props) {
   const refs = useRef<any>([]);
   const [observed, setObserved] = useState<Record<string, boolean>>({});
 
@@ -42,11 +43,7 @@ export default function Sections({ sections }: Props) {
 
   const navItems = sections.map((section) => {
     return (
-      <NavItem
-        key={section.id}
-        anchor={section.id}
-        active={section.id === current}
-      >
+      <NavItem key={section.id} anchor={section.id} active={section.id === current}>
         {section.link}
       </NavItem>
     );
@@ -63,23 +60,20 @@ export default function Sections({ sections }: Props) {
         <div className=" flex flex-col-reverse lg:flex-row">
           <div className="flex-auto relative w-full max-w-2xl mx-auto lg:mx-0 prose lg:prose-xl mt-8 lg:mt-24 mb-[25%]">
             {sections.map((section, i) => (
-              <div
-                key={section.id}
-                ref={(el) => (refs.current[i] = el)}
-                id={section.id}
-                className="relative mb-24 scroll-mt-28"
-                dangerouslySetInnerHTML={{ __html: section.content }}
-              />
+              <div key={section.id} ref={(el) => (refs.current[i] = el)}>
+                <div
+                  id={section.id}
+                  className="relative mb-24 scroll-mt-28"
+                  dangerouslySetInnerHTML={{ __html: section.content }}
+                />
+                {section.id === "program" ? <Program program={program} /> : null}
+              </div>
             ))}
           </div>
 
           <div className="flex mx-auto lg:w-1/3 lg:mr-0">
             <div className="lg:fixed flex lg:flex-col ml-auto">
-              <img
-                alt={"Logo"}
-                src={"/images/logo.png"}
-                className="p-8 w-full max-w-[500px]"
-              />
+              <img alt={"Logo"} src={"/images/logo.png"} className="p-8 w-full max-w-[500px]" />
               <ul className="hidden lg:flex flex-col lg:mx-auto justify-center prose md:prose-xl lg:prose-2xl">
                 {navItems}
               </ul>
@@ -91,18 +85,10 @@ export default function Sections({ sections }: Props) {
   );
 }
 
-const NavItem = (props: {
-  children: React.ReactNode;
-  anchor: string;
-  active: boolean;
-}) => {
+const NavItem = (props: { children: React.ReactNode; anchor: string; active: boolean }) => {
   return (
     <Link href={`#${props.anchor}`}>
-      <button
-        className={`transition  p-2 lg:p-4 md:px-8    ${
-          props.active ? " text-primary" : " text-secondary"
-        } `}
-      >
+      <button className={`transition  p-2 lg:p-4 md:px-8    ${props.active ? " text-primary" : " text-secondary"} `}>
         <span className="font-semibold ">{props.children}</span>
       </button>
     </Link>
