@@ -194,7 +194,7 @@ function PresentationDialog({
         if (!open) setShowPresentation(null);
       }}
     >
-      <DialogContent className="max-w-[900px] w-[95vw] max-h-[800px] overflow-auto">
+      <DialogContent className="max-w-[900px] w-[95vw] max-h-[min(80vh,800px)] overflow-auto">
         <div className="flex flex-col">
           <h2 className="text-xl font-medium">
             <HighlightSearch search={search} text={presentation.title} />
