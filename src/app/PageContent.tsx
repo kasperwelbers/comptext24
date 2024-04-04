@@ -3,8 +3,7 @@
 import { Section } from "@/types";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import Program from "./program";
-
+import Sessions from "./sessions";
 interface Props {
   sections: Section[];
   program: Record<string, string | number>[];
@@ -58,15 +57,11 @@ export default function Sections({ sections, program }: Props) {
       </div>
       <div className="w-full max-w-[1200px] mx-auto px-4 md:px-8 py-6 md:py-12 animate-fade-in">
         <div className=" flex flex-col-reverse lg:flex-row">
-          <div className="flex-auto relative w-full max-w-2xl mx-auto lg:mx-0 prose lg:prose-xl mt-8 lg:mt-24 mb-[25%]">
+          <div className="flex-auto relative w-full max-w-2xl mx-auto lg:mx-0  mt-8 lg:mt-24 mb-[25%]">
             {sections.map((section, i) => (
-              <div key={section.id} ref={(el) => (refs.current[i] = el)}>
-                <div
-                  id={section.id}
-                  className="relative mb-24 scroll-mt-28"
-                  dangerouslySetInnerHTML={{ __html: section.content }}
-                />
-                {section.id === "program" ? <Program program={program} /> : null}
+              <div id={section.id} key={section.id} ref={(el) => (refs.current[i] = el)} className="mb-24 scroll-mt-28">
+                <div className="prose lg:prose-xl relative" dangerouslySetInnerHTML={{ __html: section.content }} />
+                {section.id === "sessions" ? <Sessions program={program} /> : null}
               </div>
             ))}
           </div>

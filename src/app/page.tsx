@@ -39,8 +39,9 @@ async function getData() {
 
   return [
     await getContent(db, "welcome"),
-    await getContent(db, "cfp"),
     await getContent(db, "program"),
+    await getContent(db, "sessions"),
+    await getContent(db, "cfp"),
     // await getContent(db, "workshops"),
     // await getContent(db, "sponsors"),
   ];

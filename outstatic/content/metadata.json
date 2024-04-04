@@ -78,6 +78,24 @@
       "__outstatic": {
         "commit": "4c14826650ff8751b5c4f307ee8100d99c64549f",
         "hash": "1596991553",
+        "path": "outstatic/content/pages/sessions.md"
+      },
+      "author": {
+        "name": "Kasper Welbers",
+        "picture": ""
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "Session overview",
+      "publishedAt": "2023-09-21T04:35:07.000Z",
+      "slug": "sessions",
+      "status": "published",
+      "title": "Sessions"
+    },
+    {
+      "__outstatic": {
+        "commit": "4c14826650ff8751b5c4f307ee8100d99c64549f",
+        "hash": "1596991553",
         "path": "outstatic/content/pages/sponsors.md"
       },
       "author": {
