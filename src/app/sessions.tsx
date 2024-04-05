@@ -15,6 +15,7 @@ interface Session {
   day: string;
   time: string;
   slot: string;
+  chair: string;
   discussant: string;
   presentations: Presentation[];
 }
@@ -61,6 +62,7 @@ export default function Sessions({ program }: Props) {
           day: String(item.time).split(",")[0],
           time: String(item.time).split(", ")[1].split("-")[0],
           slot: String(item.slot),
+          chair: String(item.chair),
           discussant: String(item.discussant),
           presentations: [],
         };
@@ -165,6 +167,7 @@ function DaySessions({
             <Presentations
               presentations={session.presentations}
               search={search}
+              chair={session.chair}
               discussant={session.discussant}
               setShowPresentation={setShowPresentation}
             />
@@ -247,19 +250,23 @@ function Tags({
 function Presentations({
   presentations,
   search,
+  chair,
   discussant,
   setShowPresentation,
 }: {
   presentations: Presentation[];
   search: string;
+  chair: string;
   discussant: string;
   setShowPresentation: (p: Presentation) => void;
 }) {
   return (
     <div className="flex flex-col bg-primary/10 rounded">
-      <h3 className="text-primary text-base font-bold p-2 pl-3">
-        <span>Discussant: </span>
-        <span>{discussant}</span>
+      <h3 className="bg-white pl-16 grid grid-cols-[max-content,1fr] gap-x-5 text-primary text-base pb-4">
+        <div>{chair}</div>
+        <div className="italic text-primary/70">chair</div>
+        <div>{discussant}</div>
+        <div className="italic text-primary/70">discussant</div>
       </h3>
       {presentations.map((presentation) => {
         // const color = presentation.highlight ? "bg-secondary/30 hover:bg-primary/40" : "hover:bg-primary/20";
@@ -270,11 +277,9 @@ function Presentations({
             className={`${color} p-2 pl-3 rounded cursor-pointer`}
             onClick={() => setShowPresentation(presentation)}
           >
-            <div className="grid grid-cols-[2rem,calc(100%-2rem)] items-center max-w-full">
+            <div className="grid grid-cols-[1rem,calc(100%-2rem)] items-center max-w-full">
               <div className="w-10">
-                {presentation.highlight ? (
-                  <ChevronRight className="h-7 w-7 p-1 -translate-x-1 bg-yellow-300 rounded-full" />
-                ) : null}
+                {presentation.highlight ? <div className="h-10 w-1 rounded-full bg-tertiary"></div> : null}
               </div>
               <div className="w-full">
                 <h3 className="w-full text-sm font-medium whitespace-nowrap overflow-hidden text-ellipsis">
@@ -295,7 +300,7 @@ function Presentations({
 function HighlightSearch({ text, search }: { text: string; search: string }) {
   return (
     <Highlighter
-      highlightClassName="bg-yellow-300 rounded"
+      highlightClassName="bg-tertiary rounded"
       searchWords={[search]}
       autoEscape={true}
       textToHighlight={text}

@@ -43,6 +43,6 @@ async function getData() {
     await getContent(db, "sessions"),
     await getContent(db, "cfp"),
     // await getContent(db, "workshops"),
-    // await getContent(db, "sponsors"),
+    await getContent(db, "sponsors"),
   ];
 }
