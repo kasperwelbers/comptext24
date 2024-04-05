@@ -12,7 +12,9 @@ interface Props {
 interface Session {
   id: number;
   title: string;
-  slot: keyof typeof slotDict;
+  day: string;
+  time: string;
+  slot: string;
   presentations: Presentation[];
 }
 
@@ -31,19 +33,6 @@ interface Presentation {
   highlight: boolean;
   stringified: string;
 }
-
-const slotDict = {
-  Day1_1: "9:30",
-  Day1_2: "11:30",
-  Day1_3: "14:00",
-  Day1_4: "16:00",
-  Day1_5: "18:00",
-  Day2_1: "9:30",
-  Day2_2: "11:30",
-  Day2_3: "14:00",
-  Day2_4: "16:00",
-  Day2_5: "18:00",
-};
 
 export default function Sessions({ program }: Props) {
   const [search, setSearch] = useState("");
@@ -68,7 +57,9 @@ export default function Sessions({ program }: Props) {
         sessions[id] = {
           id: Number(item.session),
           title: String(item.session_title),
-          slot: String(item.slot) as keyof typeof slotDict,
+          day: String(item.time).split(",")[0],
+          time: String(item.time).split(", ")[1].split("-")[0],
+          slot: String(item.slot),
           presentations: [],
         };
       }
@@ -76,9 +67,9 @@ export default function Sessions({ program }: Props) {
         id: Number(item.id),
         title: String(item.Title),
         text: String(item.full_text),
-        authors: String(item.authors).split("; "),
-        discipline: String(item.Discipline).split("; "),
-        keywords: String(item.keywords).split("; "),
+        authors: String(item.authors).split(/; ?/),
+        discipline: String(item.Discipline).split(/; ?/),
+        keywords: String(item.keywords).split(/; ?/),
         approach: String(item.approach),
         data: String(item.data),
         issues: String(item.issues),
@@ -115,8 +106,8 @@ export default function Sessions({ program }: Props) {
   }, [sessions, debouncedSearch]);
 
   const [day1Sessions, day2Sessions] = useMemo(() => {
-    const day1Sessions = filteredSessions.filter((s) => s.slot.startsWith("Day1"));
-    const day2Sessions = filteredSessions.filter((s) => s.slot.startsWith("Day2"));
+    const day1Sessions = filteredSessions.filter((s) => s.day === "Friday");
+    const day2Sessions = filteredSessions.filter((s) => s.day === "Saturday");
     return [day1Sessions, day2Sessions];
   }, [filteredSessions]);
 
@@ -161,7 +152,7 @@ function DaySessions({
         <AccordionItem className="m-0" value={session.title}>
           <AccordionTrigger className="">
             <div className="text-base items-center grid grid-cols-[4rem,1fr]">
-              <div className="text-primary w-16 text-left">{slotDict?.[session.slot]}</div>
+              <div className="text-primary w-16 text-left">{session.time}</div>
               <div className="my-0 text-left">{session.title}</div>
             </div>
           </AccordionTrigger>
@@ -199,7 +190,9 @@ function PresentationDialog({
           <h2 className="text-xl font-medium">
             <HighlightSearch search={search} text={presentation.title} />
           </h2>
-          <h3 className="text-base italic mt-2">{presentation.authors.join(", ")}</h3>
+          <h3 className="text-base italic mt-2">
+            <HighlightSearch search={search} text={presentation.authors.join(", ")} />
+          </h3>
           <div className="flex gap-2 mt-5 flex-wrap">
             <Tags presentation={presentation} item="discipline" search={search} />
             <Tags presentation={presentation} item="keywords" search={search} />
