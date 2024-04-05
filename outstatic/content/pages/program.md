@@ -1,5 +1,5 @@
 ---
-title: 'Program'
+title: 'Programme'
 status: 'published'
 author:
   name: 'Kasper Welbers'
@@ -7,7 +7,7 @@ author:
 slug: 'program'
 description: 'Program of CompText 2024'
 coverImage: ''
-publishedAt: '2023-09-21T04:35:07.000Z'
+publishedAt: '2024-04-05T11:35:07.000Z'
 ---
 
 # Programme (preliminary)
@@ -22,7 +22,6 @@ publishedAt: '2023-09-21T04:35:07.000Z'
 
 - 13:30 - 16:30 Afternoon Session
 
-- 16:30 - 18:00 Wine and snacks Networking Reception (Lobby of Learning and Teaching Building) Sponsored by the Journal of Elections, Public Opinion and Parties and the University of Strathclyde Strategic Themes
 
 ## Friday, May 3
 
@@ -30,23 +29,19 @@ publishedAt: '2023-09-21T04:35:07.000Z'
 
 - 09:00 - 18:00 – Registration Open, NU-02C33x Lobby Campus Square
 
-- 09:30 - 10:30 – Fun Run, led my Maarja Lühiste (meeting by big statue in the middle of George Square)
+- 9:00 - 10:30 – Panel Session 1
 
-- 09:30 - 11:00 – Panel Session 1
+- 10:45 - 12:15 – Panel Session 2
 
-- 11:00 – Break
+- 12:15 – Lunch, NU-02C33x Lobby Campus Square
 
-- 11:30 - 13:00 – Panel Session 2
+- 13:15 - 14:45 – Panel Session 3
 
-- 13:00 – Lunch, NU-02C33x Lobby Campus Square
+- 15:00 - 16:30 – Panel Session 4
 
-- 14:00 - 15:30 – Panel Session 3
+- 16:45 - 18:15 – Panel Session 5
 
-- 15:30 – Break
-
-- 16:00 - 17:30 – Panel Session 4
-
-- 18:30 – Reception & Dinner at Lowlander Botanical Bar & Restaurant
+- 19:00 – Reception & Dinner at Lowlander Botanical Bar & Restaurant
 
 ## Saturday, May 4
 
@@ -54,23 +49,21 @@ publishedAt: '2023-09-21T04:35:07.000Z'
 
 - 09:00 - 18:00 – Registration Open, NU-02C33x Lobby Campus Square
 
-- 09:15 - 10:45 – Panel Session 5
+- 09:00 - 18:00 – Registration Open, NU-02C33x Lobby Campus Square
 
-- 10:45 – Break
+- 9:00 - 10:30 – Panel Session 6
 
-- 11:00 - 12:30 – Panel Session 6
+- 10:45 - 12:15 – Panel Session 7
 
-- 12:30 – Lunch, NU-02C33x Lobby Campus Square
+- 12:15 – Lunch, NU-02C33x Lobby Campus Square
 
-- 13:00 - 14:00 – Keynote Roundtable Discussion
+- 12:30 - 13:00 – Keynote Roundtable Discussion
 
-- 14:00 – Break
+- 13:15 - 14:45 – Panel Session 8
 
-- 14:15 - 15:30 – Panel Session 7
+- 15:00 - 16:30 – Panel Session 9
 
-- 15:30 – Break
+- 16:45 - 18:15 – Panel Session 10
 
-- 16:00 - 17:30 – Panel Session 8
-
-- 19:00 – Dinner and Reception for participants registered for the full package at Grand Central Hotel
+- 19:00 – Dinner and Reception for participants registered for the full package at Conscious Hotel Westerpark
 
