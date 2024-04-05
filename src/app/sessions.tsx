@@ -156,7 +156,7 @@ function DaySessions({
   return (
     <Accordion className="px-2" type="single" collapsible value={accordionValue} onValueChange={setAccordionValue}>
       {sessions.map((session) => (
-        <AccordionItem className="m-0" value={session.title}>
+        <AccordionItem key={session.id} className="m-0" value={session.title}>
           <AccordionTrigger className="">
             <div className="text-base items-center grid grid-cols-[4rem,1fr]">
               <div className="text-primary w-16 text-left">{session.time}</div>
