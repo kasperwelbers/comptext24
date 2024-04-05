@@ -1,7 +1,7 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { ChevronRight, Loader, Search } from "lucide-react";
+import { ChevronRight, Loader, Search, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import Highlighter from "react-highlight-words";
 
@@ -15,6 +15,7 @@ interface Session {
   day: string;
   time: string;
   slot: string;
+  discussant: string;
   presentations: Presentation[];
 }
 
@@ -60,6 +61,7 @@ export default function Sessions({ program }: Props) {
           day: String(item.time).split(",")[0],
           time: String(item.time).split(", ")[1].split("-")[0],
           slot: String(item.slot),
+          discussant: String(item.discussant),
           presentations: [],
         };
       }
@@ -113,14 +115,17 @@ export default function Sessions({ program }: Props) {
 
   return (
     <div className="relative mb-10">
-      <div className="flex gap-3 items-center justify-end my-3">
+      <div className="relative flex gap-3 items-center justify-end my-3">
         {debouncing ? <Loader className="spinner" /> : <Search />}
         <Input
-          className="w-52 focus-visible:ring-transparent"
+          className="relative w-52 focus-visible:ring-transparent"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search"
         />
+        <div className="absolute right-2">
+          <X className="cursor-pointer text-gray-400 hover:text-foreground" onClick={() => setSearch("")} />
+        </div>
       </div>
       <h3 className="bg-primary font-bold text-lg text-white px-2 py-2 rounded">Friday</h3>
       <DaySessions sessions={day1Sessions} search={debouncedSearch} setShowPresentation={setShowPresentation} />
@@ -160,6 +165,7 @@ function DaySessions({
             <Presentations
               presentations={session.presentations}
               search={search}
+              discussant={session.discussant}
               setShowPresentation={setShowPresentation}
             />
           </AccordionContent>
@@ -228,7 +234,7 @@ function Tags({
   if (!value || value === "undefined") return null;
   return (
     <div className="flex-auto flex items-center justify-start gap-3 bg-primary/20 rounded px-2 py-1">
-      <div className=" font-medium  text-sm">{item}</div>
+      <div className=" font-medium  text-sm min-w-[4rem] sm:min-w-0">{item}</div>
       <div className="flex gap-2">
         <span className="text-xs">
           <HighlightSearch text={String(value)} search={search} />
@@ -241,16 +247,23 @@ function Tags({
 function Presentations({
   presentations,
   search,
+  discussant,
   setShowPresentation,
 }: {
   presentations: Presentation[];
   search: string;
+  discussant: string;
   setShowPresentation: (p: Presentation) => void;
 }) {
   return (
     <div className="flex flex-col bg-primary/10 rounded">
+      <h3 className="text-primary text-base font-bold p-2 pl-3">
+        <span>Discussant: </span>
+        <span>{discussant}</span>
+      </h3>
       {presentations.map((presentation) => {
-        const color = presentation.highlight ? "bg-secondary/30 hover:bg-primary/40" : "hover:bg-primary/20";
+        // const color = presentation.highlight ? "bg-secondary/30 hover:bg-primary/40" : "hover:bg-primary/20";
+        const color = "hover:bg-primary/20";
         return (
           <div
             key={presentation.id}
@@ -258,7 +271,11 @@ function Presentations({
             onClick={() => setShowPresentation(presentation)}
           >
             <div className="grid grid-cols-[2rem,calc(100%-2rem)] items-center max-w-full">
-              <div className="w-10">{presentation.highlight ? <ChevronRight className="w-5 h-5" /> : null}</div>
+              <div className="w-10">
+                {presentation.highlight ? (
+                  <ChevronRight className="h-7 w-7 p-1 -translate-x-1 bg-yellow-300 rounded-full" />
+                ) : null}
+              </div>
               <div className="w-full">
                 <h3 className="w-full text-sm font-medium whitespace-nowrap overflow-hidden text-ellipsis">
                   <HighlightSearch text={presentation.title} search={search} />
@@ -278,7 +295,7 @@ function Presentations({
 function HighlightSearch({ text, search }: { text: string; search: string }) {
   return (
     <Highlighter
-      highlightClassName="bg-yellow/50 rounded"
+      highlightClassName="bg-yellow-300 rounded"
       searchWords={[search]}
       autoEscape={true}
       textToHighlight={text}
