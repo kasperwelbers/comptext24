@@ -25,6 +25,7 @@ A special thanks to our sponsors:
 | ------------------------------------------------------------------------------------------------------------------ |
 | ![NEWSFLOWS](https://newsflows.eu/wp-content/uploads/2021/03/newsflowslogo-300x166.png)                            |
 | ![Societal Analytics Lab](https://www.societal-analytics.nl/images/logo_small.svg)                                 |
+| ![ReSCU](/images/ReSCU.png)                                                                                        |
 | ![Network Institute](https://networkinstitute.org/wp-content/themes/twentyeleven-child/img/logo_clean_sm3.png)     |
 | ![The Hot Politics Lab](https://www.hotpolitics.eu/wp-content/uploads/2018/08/logo-1.png)                          |
 | ![Computational Communication Science Lab (CCL)](https://compcommlab.univie.ac.at/fileadmin/_processed_/csm_CCL_logo_transparent_backgroud_2ca944e2f2.png) |
