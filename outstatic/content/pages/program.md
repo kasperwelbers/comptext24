@@ -29,17 +29,17 @@ publishedAt: '2024-04-05T11:35:07.000Z'
 
 - 09:00 - 18:00 – Registration Open, NU-02C33x Lobby Campus Square
 
-- 9:00 - 10:30 – Panel Session 1
+- 09:30 - 11:00 – Panel Session 1
 
-- 10:45 - 12:15 – Panel Session 2
+- 11:15 - 12:45 – Panel Session 2
 
-- 12:15 – Lunch, NU-02C33x Lobby Campus Square
+- 12:45 - 13:30 – Lunch, NU-02C33x Lobby Campus Square
 
-- 13:15 - 14:45 – Panel Session 3
+- 13:30 - 15:00 – Panel Session 3
 
-- 15:00 - 16:30 – Panel Session 4
+- 15:15 - 16:45 – Panel Session 4
 
-- 16:45 - 18:15 – Panel Session 5
+- 17:00 - 18:30 – Panel Session 5
 
 - 19:00 – Reception & Dinner at Lowlander Botanical Bar & Restaurant
 
@@ -49,21 +49,17 @@ publishedAt: '2024-04-05T11:35:07.000Z'
 
 - 09:00 - 18:00 – Registration Open, NU-02C33x Lobby Campus Square
 
-- 09:00 - 18:00 – Registration Open, NU-02C33x Lobby Campus Square
+- 10:00 - 11:30 – Panel Session 6
 
-- 9:00 - 10:30 – Panel Session 6
+- 11:45 - 13:15 – Panel Session 7
 
-- 10:45 - 12:15 – Panel Session 7
+- 13:15 - 14:00 – Lunch, NU-02C33x Lobby Campus Square
 
-- 12:15 – Lunch, NU-02C33x Lobby Campus Square
+- 14:00 - 15:00 – Keynote Roundtable Discussion
 
-- 12:30 - 13:00 – Keynote Roundtable Discussion
+- 15:15 - 16:45 – Panel Session 8
 
-- 13:15 - 14:45 – Panel Session 8
-
-- 15:00 - 16:30 – Panel Session 9
-
-- 16:45 - 18:15 – Panel Session 10
+- 17:00 - 18:30 – Panel Session 9
 
 - 19:00 – Dinner and Reception for participants registered for the full package at Conscious Hotel Westerpark
 
