@@ -24,7 +24,7 @@ The COMPTEXT 2024 Organising Committee consists of:
 
 - Alona O. Dolinsky (*Vrije Universiteit* Amsterdam)
 
-- Johannes Gruber (*Vrije Universiteit* Amsterdam)
+- Johannes B. Gruber (*Vrije Universiteit* Amsterdam)
 
 - Kasper Welbers (*Vrije Universiteit* Amsterdam)
 

@@ -7,7 +7,7 @@ author:
 slug: "sessions"
 description: "Session overview"
 coverImage: ""
-publishedAt: "2024-04-4T04:35:07.000Z"
+publishedAt: "2024-04-4T11:35:07.000Z"
 ---
 
 # Sessions
