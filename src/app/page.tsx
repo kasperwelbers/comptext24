@@ -27,11 +27,18 @@ async function getContent(db: any, slug: string): Promise<Section> {
 
 async function getProgram(): Promise<Record<string, string | number>[]> {
   const file = await fs.readFile("data/comptext_program.json", "utf-8");
-  return JSON.parse(file);
-  console.log(file);
-  //const programData = await fetch("/data/comptext_program.json");
-  //const program = await programData.json();
-  //return program;
+  const program = JSON.parse(file);
+
+  const roomsFile = await fs.readFile("data/comptext_rooms.json", "utf-8");
+  const rooms = JSON.parse(roomsFile);
+
+  return program.map((item: Record<string, string | number>) => {
+    const room = rooms.find((r: Record<string, string>) => r.session === item.session);
+    return {
+      ...item,
+      room: room ? room.room : "",
+    };
+  });
 }
 
 async function getData() {

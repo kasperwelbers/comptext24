@@ -18,6 +18,7 @@ interface Session {
   chair: string;
   discussant: string;
   presentations: Presentation[];
+  room: string;
 }
 
 interface Presentation {
@@ -65,6 +66,7 @@ export default function Sessions({ program }: Props) {
           chair: String(item.chair),
           discussant: String(item.discussant),
           presentations: [],
+          room: String(item.room),
         };
       }
       const presentation = {
@@ -168,6 +170,7 @@ function DaySessions({
               presentations={session.presentations}
               search={search}
               chair={session.chair}
+              room={session.room}
               discussant={session.discussant}
               setShowPresentation={setShowPresentation}
             />
@@ -251,18 +254,22 @@ function Presentations({
   presentations,
   search,
   chair,
+  room,
   discussant,
   setShowPresentation,
 }: {
   presentations: Presentation[];
   search: string;
   chair: string;
+  room: string;
   discussant: string;
   setShowPresentation: (p: Presentation) => void;
 }) {
   return (
     <div className="flex flex-col bg-primary/10 rounded">
       <h3 className="bg-white pl-16 grid grid-cols-[max-content,1fr] gap-x-5 text-primary text-base pb-4">
+        <div className="font-bold">{room}</div>
+        <div className="italic text-primary/70 font-bold">room</div>
         <div>{chair}</div>
         <div className="italic text-primary/70">chair</div>
         <div>{discussant}</div>
