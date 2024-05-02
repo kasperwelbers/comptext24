@@ -54,7 +54,7 @@ _Vrije Universiteit Amsterdam, NU building_
 
 - 13:15 - 14:00 – Lunch, NU Eventspot NU-00B00
 
-- 14:00 - 15:00 – Keynote Roundtable Discussion
+- 14:00 - 15:00 – Keynote: Johannes B. Gruber - We should use local GPTs (and it's very easy to do!)
 
 - 15:15 - 16:45 – Panel Session 8
 
