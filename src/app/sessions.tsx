@@ -19,6 +19,7 @@ interface Session {
   discussant: string;
   presentations: Presentation[];
   room: string;
+  stringified: string;
 }
 
 interface Presentation {
@@ -62,13 +63,15 @@ export default function Sessions({ program }: Props) {
           title: String(item.session_title),
           day: String(item.time).split(",")[0],
           time: String(item.time).split(", ")[1].split("-")[0],
-          slot: String(item.slot),
+          slot: "",
           chair: String(item.chair),
           discussant: String(item.discussant),
           presentations: [],
           room: String(item.room),
+          stringified: "",
         };
       }
+      sessions[id].slot = String(item.day) + " " + String(item.time);
       const presentation = {
         id: Number(item.id),
         title: String(item.Title),
@@ -85,6 +88,7 @@ export default function Sessions({ program }: Props) {
         stringified: "",
       };
       presentation.stringified = JSON.stringify(Object.values(presentation));
+      sessions[id].stringified = JSON.stringify(Object.values(sessions[id]));
       sessions[id].presentations.push(presentation);
     }
     return Object.values(sessions).sort((a, b) => a.slot.localeCompare(b.slot));
@@ -95,7 +99,7 @@ export default function Sessions({ program }: Props) {
     const fs: Session[] = [];
     for (const session of sessions) {
       const showPresentations: Presentation[] = [];
-      let showSession = false;
+      let showSession = session.stringified.toLowerCase().includes(debouncedSearch.toLowerCase());
       for (const presentation of session.presentations) {
         if (presentation.stringified.toLowerCase().includes(debouncedSearch.toLowerCase())) {
           showPresentations.push({ ...presentation, highlight: true });
@@ -270,9 +274,13 @@ function Presentations({
       <h3 className="bg-white pl-16 grid grid-cols-[max-content,1fr] gap-x-5 text-primary text-base pb-4">
         <div className="font-bold">{room}</div>
         <div className="italic text-primary/70 font-bold">room</div>
-        <div>{chair}</div>
+        <div>
+          <HighlightSearch text={chair} search={search} />
+        </div>
         <div className="italic text-primary/70">chair</div>
-        <div>{discussant}</div>
+        <div>
+          <HighlightSearch text={discussant} search={search} />
+        </div>
         <div className="italic text-primary/70">discussant</div>
       </h3>
       {presentations.map((presentation) => {
