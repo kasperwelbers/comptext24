@@ -44,7 +44,7 @@ async function getProgram(): Promise<Record<string, string | number>[]> {
 const keynote = async () => {
   const md = `# Keynote
   
-  If you enjoyed the keynote speech, and want to revisit the slides or share them with your collegues, you can download them here.
+  If you enjoyed the keynote speech about running Generative Large Language Models locally using Ollama, and want to revisit the slides or share them with your collegues, you can download them here.
   `;
   return {
     id: "keynote",
