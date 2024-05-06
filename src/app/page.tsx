@@ -41,12 +41,25 @@ async function getProgram(): Promise<Record<string, string | number>[]> {
   });
 }
 
+const keynote = async () => {
+  const md = `# Keynote
+  
+  If you enjoyed the keynote speech, and want to revisit the slides or share them with your collegues, you can download them here.
+  `;
+  return {
+    id: "keynote",
+    link: "Keynote",
+    content: await markdownToHtml(md),
+  };
+};
+
 async function getData() {
   const db = await load();
 
   return [
     await getContent(db, "welcome"),
-    await getContent(db, "program"),
+    await keynote(),
+    // await getContent(db, "program"),
     await getContent(db, "sessions"),
     //await getContent(db, "cfp"),
     await getContent(db, "workshops"),

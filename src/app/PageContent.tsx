@@ -62,6 +62,18 @@ export default function Sections({ sections, program }: Props) {
               <div id={section.id} key={section.id} ref={(el) => (refs.current[i] = el)} className="mb-24 scroll-mt-28">
                 <div className="prose lg:prose-xl relative" dangerouslySetInnerHTML={{ __html: section.content }} />
                 {section.id === "sessions" ? <Sessions program={program} /> : null}
+                {section.id === "keynote" ? (
+                  <div className="mt-3">
+                    <a
+                      href="https://www.dropbox.com/scl/fi/ry1u9i6xnltqjg6gm54z2/JBGruber_comptext_keynote.html?rlkey=583joytuce88xp7dxwho59npz&st=jyqljm1c&dl=1"
+                      className="text-primary font-semibold underline"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Download Keynote Slides
+                    </a>
+                  </div>
+                ) : null}
               </div>
             ))}
           </div>
